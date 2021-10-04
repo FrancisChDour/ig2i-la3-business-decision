@@ -47,6 +47,15 @@ Ainsi un fromage "chevrepatemolle" est riche en vitamines car il se situe sur l'
 
 ![63376edf-de6b-4458-9f2b-1c00225395d6](./images/63376edf-de6b-4458-9f2b-1c00225395d6.png)
 
+## Classification
+
+```
+data<-read.csv2(file.choose(), row.names=1, sep=";") 
+res.hcpc <- HCPC(data)
+```
+
+
+
 ## AFC : étude d’un tableau de contingence
 
 ### Objectif
