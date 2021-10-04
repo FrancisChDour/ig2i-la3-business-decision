@@ -45,7 +45,7 @@ res <- PCA(data)
 
 Ainsi un fromage "chevrepatemolle" est riche en vitamines car il se situe sur l'axe "folates". On en déduit donc qu'il est pauvre en calcium (en effet 72,8, valeure la plus faible pour ce caractère). Le rocquefort serait très salé, ce qui semble juste ! Les fromages très gras sont par exemple le Cheddat ou le Parmesan. Les fromages frais quant à eux sont opposées aux axes des fromages gras. Il semblent donc plus "léger" mais aussi pauvre en calcium et en vitamines.
 
-![63376edf-de6b-4458-9f2b-1c00225395d6](/Users/FRANCOIS/PycharmProjects/ig2i-la3-business-decision/images/63376edf-de6b-4458-9f2b-1c00225395d6.png)
+![63376edf-de6b-4458-9f2b-1c00225395d6](./images/63376edf-de6b-4458-9f2b-1c00225395d6.png)
 
 ## AFC : étude d’un tableau de contingence
 
