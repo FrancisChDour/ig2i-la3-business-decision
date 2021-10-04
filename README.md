@@ -7,34 +7,19 @@ Pour chaque technique d’analyse, nous devons choisir un ou plusieurs exemples 
 
 On charge le dataset `fromages.csv` qui contient des données conercernant un certain nombre de fromages, notamment leur données nutritionnelles : 
 
-```
-  Fromages    calories sodium calcium lipides retinol folates proteines cholesterol magnesium
-  <chr>          <dbl>  <dbl>   <dbl>   <dbl>   <dbl>   <dbl>     <dbl>       <dbl>     <dbl>
-1 CarredelEst      314   354.    72.6    26.3    51.6    30.3      21            70        20
-2 Babybel          314   238    210.     25.1    63.7     6.4      22.6          70        27
-3 Beaufort         401   112    259.     33.3    54.9     1.2      26.6         120        41
-4 Bleu             342   336    211.     28.9    37.1    27.5      20.2          90        27
-5 Camembert        264   314    216.     19.5   103      36.4      23.4          60        20
-6 Cantal           367   256    264      28.8    48.8     5.7      23            90        30
-```
-
-On supprime la colonne non numérique "fromages" :
-
 ```R
-data <- fromages[2:10]
+data<-read.csv2(file.choose(), row.names=1, sep=";") 
 head(data)
 ```
 
 ```
-# A tibble: 6 × 9
-  calories sodium calcium lipides retinol folates proteines cholesterol magnesium
-     <dbl>  <dbl>   <dbl>   <dbl>   <dbl>   <dbl>     <dbl>       <dbl>     <dbl>
-1      314   354.    72.6    26.3    51.6    30.3      21            70        20
-2      314   238    210.     25.1    63.7     6.4      22.6          70        27
-3      401   112    259.     33.3    54.9     1.2      26.6         120        41
-4      342   336    211.     28.9    37.1    27.5      20.2          90        27
-5      264   314    216.     19.5   103      36.4      23.4          60        20
-6      367   256    264      28.8    48.8     5.7      23            90        30
+            calories sodium calcium lipides retinol folates proteines cholesterol magnesium
+CarredelEst      314  353.5    72.6    26.3    51.6    30.3      21.0          70        20
+Babybel          314  238.0   209.8    25.1    63.7     6.4      22.6          70        27
+Beaufort         401  112.0   259.4    33.3    54.9     1.2      26.6         120        41
+Bleu             342  336.0   211.1    28.9    37.1    27.5      20.2          90        27
+Camembert        264  314.0   215.9    19.5   103.0    36.4      23.4          60        20
+Cantal           367  256.0   264.0    28.8    48.8     5.7      23.0          90        30
 ```
 
 Et on calcul la matrice de corrélation pour déterminer les variables fortements corrélées : 
@@ -57,6 +42,10 @@ res <- PCA(data)
 
 
 ![6f419fb8-5d63-47cf-89ed-8eee6f891a2e](images/6f419fb8-5d63-47cf-89ed-8eee6f891a2e.png)
+
+Ainsi un fromage "chevrepatemolle" est riche en vitamines car il se situe sur l'axe "folates". On en déduit donc qu'il est pauvre en calcium (en effet 72,8, valeure la plus faible pour ce caractère). Le rocquefort serait très salé, ce qui semble juste ! Les fromages très gras sont par exemple le Cheddat ou le Parmesan. Les fromages frais quant à eux sont opposées aux axes des fromages gras. Il semblent donc plus "léger" mais aussi pauvre en calcium et en vitamines.
+
+![63376edf-de6b-4458-9f2b-1c00225395d6](/Users/FRANCOIS/PycharmProjects/ig2i-la3-business-decision/images/63376edf-de6b-4458-9f2b-1c00225395d6.png)
 
 ## AFC : étude d’un tableau de contingence
 
