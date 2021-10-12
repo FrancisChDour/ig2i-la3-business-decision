@@ -49,12 +49,24 @@ Ainsi un fromage "chevrepatemolle" est riche en vitamines car il se situe sur l'
 
 ## Classification
 
-```
+On continue sur le dataset "fromages" sur lequel on va appliquer la classfication avec `HCPC`.
+
+```R
 data<-read.csv2(file.choose(), row.names=1, sep=";") 
 res.hcpc <- HCPC(data)
 ```
 
+On botient la classification hiérarchique suivante. 3 cluster sont identifiées :
 
+![](images/2a1a8315-789c-4df9-bd22-4bc0bd40cc59.png)
+
+On peut aussi représenter cette classification hiérarchique sur la factor map :
+
+![](images/020aa8e9-12d3-4fe2-9cba-9db34fd30335.png)
+
+Les 3 cluster regroupent nos fromages selon leurs caractéristiques. Exemple ici pour le cluster 1, les yaourt, fromages frais et chèvres pate molles sont regroupées. Ce qui semble correcte :
+
+![](images/6b746c4f-a434-4d0a-afd9-e0fb8971d31c.png)
 
 ## AFC : étude d’un tableau de contingence
 
