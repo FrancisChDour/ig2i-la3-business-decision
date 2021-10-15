@@ -100,18 +100,23 @@ X-squared = 84.782, df = 6, p-value = 3.663e-16
 
 ## AFC : étude d’un tableau de contingence
 
+Todo @Romain
+
 ### Objectif
+
 L'objectif de la méthode AFC est que l'on va regarder les corrélations entre les lignes pour ensuite situer sur un graphique les caractéristiques qui reviennent le plus et quels sont les noms des lignes associés.
 
-###Démarches
+### Démarches
 
 La première étape est de formatter les données pour avoir un tableau exploitable.
 On garde les labels sur le côté pour pouvoir afficher un plot cohérent par la suite.
 
 
 
-##Classification : étude d’un tableau individus-caractères quantitatifs
+## Classification : étude d’un tableau individus-caractères quantitatifs
 
-##Analyse discriminante
+## Analyse discriminante
 
-##Anova
+Todo @Romain
+
+## Anova
