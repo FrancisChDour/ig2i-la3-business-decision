@@ -68,6 +68,36 @@ Les 3 cluster regroupent nos fromages selon leurs caractéristiques. Exemple ici
 
 ![](images/6b746c4f-a434-4d0a-afd9-e0fb8971d31c.png)
 
+## Test de Khi2
+
+On prend le dataset suivant qui représente le dégré d'alcoolisme (0 = Abstinence, 6 = tous les jours) :
+
+```
+  hommes femmes
+0     39     69
+1     67     94
+2    272    177
+3    193    191
+4    298    203
+5     76     26
+6    152     51
+```
+
+On joue le test de khi2 : 
+
+```R
+(test <- chisq.test(data))
+```
+
+On obtient le résultat suivant. On en déduit donc qu'il y a bien une forte différence entre les hommes et les femmes concernant le degré d'alcoolisme.
+
+```
+	Pearson's Chi-squared test
+
+data:  data
+X-squared = 84.782, df = 6, p-value = 3.663e-16
+```
+
 ## AFC : étude d’un tableau de contingence
 
 ### Objectif
